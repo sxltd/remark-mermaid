@@ -74,7 +74,8 @@ describe('remark-mermaid', () => {
       expect(vfile.messages[0].message).toBe('mermaid code block replaced with div');
     });
 
-    it('can handle mermaid images in simple mode', () => {
+    // This functionality requires fs-extra:
+    it.skip('can handle mermaid images in simple mode', () => {
       const srcFile = `${fixturesDir}/image-mermaid.md`;
       const destFile = `${runtimeDir}/image-mermaid.md`;
       const vfile = toVFile.readSync(srcFile);
@@ -85,7 +86,8 @@ describe('remark-mermaid', () => {
       expect(vfile.messages[0].message).toBe('mermaid link replaced with div');
     });
 
-    it('can handle mermaid links in simple mode', () => {
+    // This functionality requires fs-extra:
+    it.skip('can handle mermaid links in simple mode', () => {
       const srcFile = `${fixturesDir}/link-mermaid.md`;
       const destFile = `${runtimeDir}/link-mermaid.md`;
       const vfile = toVFile.readSync(srcFile);
